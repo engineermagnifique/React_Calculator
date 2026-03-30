@@ -3,6 +3,7 @@ import CalCulator from "./calculator";
 import Exam from "./Quiz";
 import ToDoApp from "./components/Todo";
 import FormValidate from "./components/validate";
+import Challenge1 from "./components/challenge1";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Link to="/todo" className="text-blue-600 hover:underline">Todo</Link>
         <Link to="/exam" className="text-blue-600 hover:underline">exam</Link>
         <Link to="/validate" className="text-blue-600 hover:underline">Validate</Link>
+        <Link to="/challenge1" className="text-blue-600 hover:underline">Challenge1</Link>
       </nav>
 
       <Routes>
@@ -19,6 +21,7 @@ const App = () => {
         <Route path="/todo" element={<ToDoApp />} />
         <Route path="/exam" element={<Exam />} />
         <Route path="/validate" element={<FormValidate/>}/>
+        <Route path="/challenge1" element={<Challenge1 />} />
       </Routes>
     </BrowserRouter>
   );

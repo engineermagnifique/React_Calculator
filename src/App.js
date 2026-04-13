@@ -9,7 +9,7 @@ import Counter from "./components/Reducer";
 import Employees from "./components/Employee";
 import ToggleButtons from "./components/Toogle";
 import NameTransfer from "./components/nameTransfer";
-
+import Counting from "./redux/Counter";
 const App = () => {
   return (
     <BrowserRouter>
@@ -24,6 +24,7 @@ const App = () => {
         <Link to="/employee" className="text-blue-600 hover:underline">Employee</Link>
         <Link to="/buttons" className="text-blue-600 hover:underline">Buttons</Link>
         <Link to="/names" className="text-blue-600 hover:underline">Names</Link>
+        <Link to="/count" className="text-blue-600 hover:underline">Counter</Link>
       </nav>
 
       <Routes>
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/employee" element={<Employees />} />
         <Route path="/buttons" element={<ToggleButtons />} />
         <Route path="/names" element={<NameTransfer />} />
+        <Route path="/count" element={<Counting />}/>s
       </Routes>
     </BrowserRouter>
   );

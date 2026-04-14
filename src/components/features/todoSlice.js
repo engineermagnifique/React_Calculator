@@ -15,6 +15,9 @@ const todoSlice=createSlice({
             state.todos=state.todos.filter(
                 (todo,index)=>index !==action.payload
             );
-        }
-    }
-})
+        },
+    },
+});
+
+export const {addTodo,removeTodo}=todoSlice.actions;
+export default todoSlice.reducer;

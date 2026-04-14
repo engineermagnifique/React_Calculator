@@ -10,6 +10,7 @@ import Employees from "./components/Employee";
 import ToggleButtons from "./components/Toogle";
 import NameTransfer from "./components/nameTransfer";
 import Counting from "./redux/Counter";
+import ToDoApps from "./redux/todo";
 const App = () => {
   return (
     <BrowserRouter>
@@ -22,6 +23,7 @@ const App = () => {
         <Link to="/challenge2" className="text-blue-600 hover:underline">Challenge2</Link>
         <Link to="/counter" className="text-blue-600 hover:underline">Counter</Link>
         <Link to="/employee" className="text-blue-600 hover:underline">Employee</Link>
+        <Link to="/todoredux" className="text-blue-600 hover:underline">Todo Redux</Link>
         <Link to="/buttons" className="text-blue-600 hover:underline">Buttons</Link>
         <Link to="/names" className="text-blue-600 hover:underline">Names</Link>
         <Link to="/count" className="text-blue-600 hover:underline">Counter</Link>
@@ -38,7 +40,8 @@ const App = () => {
         <Route path="/employee" element={<Employees />} />
         <Route path="/buttons" element={<ToggleButtons />} />
         <Route path="/names" element={<NameTransfer />} />
-        <Route path="/count" element={<Counting />}/>s
+        <Route path="/count" element={<Counting />}/>
+        <Route path="todoredux" element={<ToDoApps/>}/>
       </Routes>
     </BrowserRouter>
   );

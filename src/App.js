@@ -11,6 +11,8 @@ import ToggleButtons from "./components/Toogle";
 import NameTransfer from "./components/nameTransfer";
 import Counting from "./redux/Counter";
 import ToDoApps from "./redux/todo";
+import Challenges1 from "./components/challenges/Challenge1";
+import Challenges2 from "./components/challenges/Challenge2";
 const App = () => {
   return (
     <BrowserRouter>
@@ -27,6 +29,8 @@ const App = () => {
         <Link to="/buttons" className="text-blue-600 hover:underline">Buttons</Link>
         <Link to="/names" className="text-blue-600 hover:underline">Names</Link>
         <Link to="/count" className="text-blue-600 hover:underline">Counter</Link>
+        <Link to="/ex1" className="text-blue-600 hover:underline">Example1</Link>
+        <Link to="/ex2" className="text-blue-600 hover:underline">Example2</Link>
       </nav>
 
       <Routes>
@@ -41,7 +45,9 @@ const App = () => {
         <Route path="/buttons" element={<ToggleButtons />} />
         <Route path="/names" element={<NameTransfer />} />
         <Route path="/count" element={<Counting />}/>
-        <Route path="todoredux" element={<ToDoApps/>}/>
+        <Route path="/todoredux" element={<ToDoApps/>}/>
+        <Route path="/ex1" element={<Challenges1/>}/>
+        <Route path="/ex2" element={<Challenges2/>}/>
       </Routes>
     </BrowserRouter>
   );

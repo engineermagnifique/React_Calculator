@@ -5,7 +5,7 @@ function ToggleButtons() {
  const initialColors = Array(5).fill('gray');  
  const [buttonColors, setButtonColors] = useState(initialColors);
 
- const handleClick=(idx)=>{
+ const handleClick=(idx)=>{//1
    setButtonColors(buttonColor=>
     buttonColor.map((color,i)=> i===idx?'blue':color
    ))
@@ -17,7 +17,7 @@ function ToggleButtons() {
        <button
          key={index}
          style={{ backgroundColor: buttonColors[index], padding: '10px', margin: '5px', border: 'none' }}
-         onClick={() => handleClick(index)}
+         onClick={() => handleClick(index)} //1
        >
          Button {index + 1}
        </button>
